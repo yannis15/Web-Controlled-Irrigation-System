@@ -10,9 +10,7 @@ Le **Web-Controlled Irrigation System** est un projet conçu pour automatiser l'
 - **Détection de l'humidité** : Ajustement automatique en fonction des besoins du sol.
 - **Interface utilisateur intuitive** : Accès via un serveur web local.
 - **Stockage des paramètres** : Sauvegarde des horaires et réglages.
-
-## Schéma du Système
-*(Insérer ici un schéma de simulation ou de réalisation du circuit)*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Matériel Utilisé
 - **ESP32** : Microcontrôleur pour le traitement et la communication.
@@ -22,14 +20,10 @@ Le **Web-Controlled Irrigation System** est un projet conçu pour automatiser l'
 - **Pompe à eau** : Pour l’irrigation.
 - **Alimentation 12V** : Pour la pompe et le système.
 
-## Schéma de Câblage
-*(Insérer ici un typon indiquant les connexions entre les composants)*
-
-## Interface Web
-*(Insérer une capture d’écran de l’interface utilisateur)*
-
-## Boîtier de Commande
-*(Insérer des photos du boîtier contenant l’ESP32 et le relais)*
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Aperçu du système 
+![image](https://drive.google.com/file/d/1cvjm4O70kutlTAL_ZCfYK5FfOVHHDYfN/view?usp=drive_link)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Perspectives
 Ce projet peut être amélioré en intégrant des fonctionnalités comme la connectivité Wi-Fi pour un accès à distance hors réseau local, une application mobile, ou encore l’analyse des données d’arrosage pour une gestion plus intelligente.
