@@ -22,7 +22,7 @@ Le **Web-Controlled Irrigation System** est un projet conçu pour automatiser l'
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Aperçu du système 
-![Prototypage](https://drive.google.com/uc?export=view&id=1cvjm4O70kutlTAL_ZCfYK5FfOVHHDYfN)
+![Prototypage](https://drive.google.com/uc?export=view&id=1cvjm4O70kutlTAL_ZCfYK5FfOVHHDYfN&s=500)
 ![Déployement](https://drive.google.com/uc?export=view&id=18MqCeCGeEVN1lJpo2pVxo_kUu4pfhNWD)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
