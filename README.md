@@ -30,6 +30,6 @@ Le **Web-Controlled Irrigation System** est un projet conçu pour automatiser l'
 Ce projet peut être amélioré en intégrant des fonctionnalités comme la connectivité Wi-Fi pour un accès à distance hors réseau local, une application mobile, ou encore l’analyse des données d’arrosage pour une gestion plus intelligente.
 
 ## Liens Utiles
-- [Documentation Technique](lien_vers_le_README_technique)
+- [Documentation Technique](https://github.com/yannis15/Web-Controlled-Irrigation-System/blob/main/Guide%20Technique%20Web%20Controlled.md)
 - [Code Source](https://github.com/yannis15/Web-Controlled-Irrigation-System/blob/main/Src.ino)
 
