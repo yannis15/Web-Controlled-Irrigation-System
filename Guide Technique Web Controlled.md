@@ -5,39 +5,48 @@ Ce document décrit en détail l'installation, la configuration et la mise en œ
 
 ## 1. Matériel Nécessaire
 - **ESP32** : Microcontrôleur principal
+<img src="https://drive.google.com/uc?export=view&id=1KtV_B2gryuFg4fIfBt_ODdlQqG09SlfY" alt=" ESP32" width="600" height="400"/>
+
 - **Capteur d'humidité du sol** : Mesure l'humidité pour ajuster l'arrosage
+<img src="https://drive.google.com/uc?export=view&id=1s6JVd6ANgd6GUYM2rHttRJSACztcdR0-" alt=" Capteur d'humidité" width="600" height="400"/>
+
 - **Module RTC (DS3231)** : Gestion des horaires d'arrosage
+<img src="https://drive.google.com/uc?export=view&id=1tth7EHTN3t9kEiDXoSwOo-qQovfIu-54" alt=" RTC " width="600" height="400"/>
+
 - **Relais 5V** : Activation de la pompe
+<img src="https://drive.google.com/uc?export=view&id=15eIQlDX9bJrOMAgfhmgpILsnE8D6Xdgk" alt=" Relais" width="600" height="400"/>
+
 - **Pompe à eau** : Irrigation automatique
-- **Alimentation 12V** : Alimente le système
-- **Résistances et câblage** : Connexions entre les composants
-- **Boîtier** : Protection et organisation du circuit
+<img src="https://drive.google.com/uc?export=view&id=14pTBIdc-yZzLSE7-EKlOefr_ITjL0WAB" alt=" Pompe " width="600" height="600"/>
 
 ## 2. Schéma de Câblage
-*(Insérer ici un schéma détaillé des connexions du système)*
+<img src="https://drive.google.com/uc?export=view&id=1rll9s8t1DwlUHFHZYO0cD9mKfmlu0l2v" alt="  " width="600" height="400"/>
 
 ### Connexions Principales
 | Composant | ESP32 | Autres connexions |
 |-----------|-------|------------------|
-| Capteur d'humidité | GPIO34 | Alimentation 3.3V et GND |
-| Module RTC DS3231 | SDA (GPIO21), SCL (GPIO22) | Alimentation 3.3V |
-| Relais | GPIO25 | Alimentation 5V et pompe |
+| Capteur d'humidité | GPIO15 | Alimentation 5V et GND |
+| Module RTC DS3231 | SDA (GPIO19), SCL (GPIO18), RST (GPIO21) | Alimentation 5V |
+| Relais | GPIO35 | Alimentation 5V et pompe |
 | Pompe à eau | Relais | Alimentation 12V |
 
 ## 3. Installation Logicielle
 ### 3.1. Configuration de l'ESP32
 1. Installer **Arduino IDE** et ajouter le **support ESP32**.
 2. Installer les bibliothèques suivantes :
-   - `WiFi.h` : Gestion du réseau
-   - `ESPAsyncWebServer.h` : Serveur web asynchrone
-   - `ArduinoJson.h` : Traitement des données JSON
-   - `RTClib.h` : Gestion de l'horloge RTC
+   - `WiFi.h` : Gestion du réseau version=3.1.1
+   - `ESPAsyncWebSvr.h` : Serveur web asynchrone version=1.2.9
+   - `AsyncTCP.h` : Serveur web asynchrone version=1.1.4
+   - `ArduinoJson.h` : Traitement des données JSON  version=7.3.0
+   - `Preferences.h` : Pour le stockage des données dans la mémoire EEPROM version=3.1.1
+   - `virtuabotixRTC.h` : Gestion de l'horloge RTC
 3. Flasher l'ESP32 avec le code source fourni dans le [repo GitHub](lien_vers_le_code).
 
 ### 3.2. Déploiement du Serveur Web
-1. Connecter l’ESP32 au Wi-Fi.
-2. Accéder à l'interface web via l'adresse IP affichée dans le moniteur série.
-3. Configurer les horaires et modes d’arrosage depuis l’interface.
+1. Renseigner dans le code source le nom et le mot de passe du point d'acces qui sera générer par l'esp32
+2. Connecter votre appareil (téléphone portable ou ordinateur) au point d'accès.
+3. Accéder à l'interface web via l'adresse IP affichée dans le moniteur série.
+4. Configurer les horaires et modes d’arrosage depuis l’interface.
 
 ## 4. Calibration et Tests
 ### 4.1. Test des Capteurs
@@ -51,11 +60,10 @@ Ce document décrit en détail l'installation, la configuration et la mise en œ
 ## 5. Déploiement et Améliorations
 - **Ajout d’une application mobile** pour une gestion plus fluide.
 - **Intégration de la météo en ligne** pour adapter l’arrosage aux précipitations prévues.
-- **Stockage des données sur un serveur** pour une analyse des tendances d’irrigation.
+- **Stockage des données sur un serveur** pour une analyse des tendances d’irrigation avec de l'IA.
 
 ## 6. Ressources
 - [Dépôt GitHub](lien_vers_le_repo)
-- [Documentation complète](lien_vers_la_doc)
 
 Avec ce guide, vous devriez être en mesure de reproduire et d’adapter le projet en fonction de vos besoins. 🚀
 
